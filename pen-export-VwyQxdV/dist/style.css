@@ -1,0 +1,148 @@
+@font-face {
+  font-family: "hackedregular";
+  src: url("hacked-webfont.woff2") format("woff2"), url("hacked-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #151515;
+  margin: 3rem auto;
+  max-width: 60rem;
+  color: ghostwhite;
+  background-image: linear-gradient(#000000, #151515);
+}
+
+img {
+  max-width: 100%;
+  height: 20%;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 150px;
+  color: ghostwhite;
+  font-family: "hackedregular";
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 50px;
+  color: ghostwhite;
+}
+
+header {
+  text-align: left;
+  margin-bottom: 5rem;
+  font-size: 1.1rem;
+  font-family: Poppins;
+  color: ghostwhite;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+}
+@media screen and (min-width: 35rem) {
+  section {
+    flex-direction: row;
+    color: ghostwhite;
+  }
+}
+section > * {
+  flex: 1;
+  color: ghostwhite;
+}
+
+article {
+  padding: 0 1rem;
+}
+article p {
+  color: ghostwhite;
+  font-family: Poppins;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+@media screen and (min-width: 35rem) {
+  article p {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 35rem) {
+  article p:not(:last-of-type) {
+    min-height: 90vh;
+  }
+}
+
+figure {
+  align-items: center;
+  align-self: flex-start;
+  background-color: #0b4abd;
+  display: flex;
+  height: 20rem;
+  margin: 0;
+  width: 100%;
+  justify-content: center;
+  top: 3rem;
+}
+@media screen and (min-width: 35rem) {
+  figure {
+    position: sticky;
+  }
+}
+
+box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 200px);
+  margin: 0 auto;
+  max-width: 40rem;
+  overflow: scroll;
+  height: 70vh;
+  border: 3px solid;
+}
+
+img {
+  display: flex;
+  width: 100%;
+  height: 300%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: sticky;
+  top: 0;
+}
+img:nth-child(1) {
+  -o-object-position: 0 0;
+     object-position: 0 0;
+}
+img:nth-child(2) {
+  -o-object-position: 33.33% 0;
+     object-position: 33.33% 0;
+  grid-row-start: 3;
+  grid-column-start: 2;
+}
+img:nth-child(3) {
+  -o-object-position: 66.66% 0;
+     object-position: 66.66% 0;
+  grid-row-start: 4;
+  grid-column-start: 3;
+}
+img:nth-child(4) {
+  -o-object-position: 0 100%;
+     object-position: 0 100%;
+}
+img:nth-child(5) {
+  -o-object-position: 33.33% 0;
+     object-position: 33.33% 0;
+}
+img:nth-child(6) {
+  -o-object-position: 66.66% 0;
+     object-position: 66.66% 0;
+}
